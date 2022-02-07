@@ -5,7 +5,7 @@ const history = require ('connect-history-api-fallback');
 const app = express();
 
 app.use(history());
-app.use(serveStatic(path.join(__dirname, 'dist')));
+app.use(serveStatic('./dist'));
 
 const port = process.env.PORT || 5000;
 
