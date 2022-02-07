@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&family=Open+Sans:ital,wght@1,500&family=Outfit:wght@400;500&family=Paytone+One&family=Poppins:wght@400;500&display=swap');
+.home {
+    background: linear-gradient(90deg, rgba(20,44,97,1) 0%, rgba(41,92,195,1) 46%, rgba(95,140,235,1) 73%, rgba(97,133,207,1) 89%, rgba(112,157,249,1) 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.home-main-container {
+    display: flex;
+    margin-top: 100px;
+}
+.home-main-container h1 {
+    font-size: 46px;
+}
+.text-content {
+    font-family: "Nunito Sans";
+    font-style: italic;
+    font-size: 2rem;
+    color: #ed8451;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.text-content span {
+    color: #e8f2f1;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    margin-left: 10px;
+}
+.text-content p {
+    color: lavender;
+    font-family: Poppins;
+    font-style: normal;
+    text-align: start;
+}
+.home img {
+    display: block;
+    margin-top: 100px;
+    margin-right: 100px;
+    width: 200px;
+    height: 200px;
+    animation: efeito-quica 4.5s ease infinite;
+}
+.login-btn {
+    width: 250px;
+    height: 70px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 100px;
+    align-self: center;
+    background: #ecaf47;
+}
+
+@keyframes efeito-quica {
+    0% {
+        transform: scale(1,1) translateY(0);
+    }
+    5% {
+        transform: scale(1.1,0.9) translateY(0);
+    }
+    15% {
+        transform:scale(0.9,1.1) translateY(-115px);
+    }
+    30% {
+        transform:scale(1.1,0.9) translateY(0);
+    }
+    45% {
+        transform:scale(0.9,1.1) translateY(-90px);
+    }
+    60% {
+        transform:scale(1.1,0.9) translateY(0);
+    }
+    75% {
+        transform:scale(0.9,1.1) translateY(-70px);
+    }
+    100% {
+        transform:scale(1,1) translateY(0);
+    }
+}
+@media screen and (max-width: 783px) {
+    .text-content {
+        font-size: 1.5rem;
+        padding-left: 40px;
+    }
+    .home img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 654px) {
+    .home img {
+        display: none;
+    }
+    .text-content {
+        padding: 0;
+        text-align: center;
+    }
+    .text-content p {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .text-content {
+        text-align: center;
+    }
+    .text-content p {
+        font-size: 20px;
+        max-width: 350px;
+    }
+}

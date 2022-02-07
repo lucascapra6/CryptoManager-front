@@ -1,0 +1,101 @@
+.titulo-container {
+    background: #4577f1;
+    height: 40vh;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.titulo-container h1 {
+    font-family: "Poppins";
+    text-align: center;
+    color: lavender;
+    font-size: 32px;
+}
+.titulo-container p {
+    font-family: Almarai;
+    font-size: 20px;
+    color: lavenderblush;
+    margin-top: 10px;
+}
+.titulo-container a {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #f0b90b;
+}
+
+.cadastrar-jogo-container {
+    padding-top: 30px;
+    max-width: 680px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-container {
+    width: 600px;
+    height: 50vh;
+    margin-top:30px;
+    background:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 235px;
+    align-self: center;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow:1px -5px 12px -1px rgba(0,0,0,0.5)
+}
+.inputs {
+    width: 500px;
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inputs input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: rgba(227, 207, 116, 0.5);
+    background: whitesmoke;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+}
+.inputs label {
+    align-self: start;
+    margin-left: 25px;
+    margin-top: 10px;
+    color: #6b6b6b;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: start;
+}
+.inputs-container input[type="number"] {
+    width: 50%;
+    margin-left: 25px;
+}
+
+button {
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    background: #ecaf47;
+    position: absolute;
+    bottom: 0;
+}
+button:hover {
+    background: #fcd804;
+}

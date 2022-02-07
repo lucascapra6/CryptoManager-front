@@ -1,0 +1,148 @@
+.modal-gerenciar-jogos {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(24, 27, 88, 0.9);
+    display: flex;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.btn-opcoes {
+    width: 90%;
+    height: 50px;
+    margin: 5px auto;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    background:#ecaf47;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.btn-opcoes:hover {
+    background:#fcd804;
+}
+
+.modal-gerenciar-jogos-opcoes-container {
+    position: absolute;
+    top: 75px;
+    width: 500px;
+    height: 450px;
+    background: #4577f1;
+    align-self: flex-end;
+    justify-self: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 6px 11px 0px rgba(0,0,0,0.79);
+
+}
+
+.modal-gerenciar-jogos-container {
+    position: relative;
+    display: flex;
+    top: 75px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 500px;
+    height: 450px;
+    background: #214ba2;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 30px;
+    box-shadow: 2px 6px 11px 0px rgba(0,0,0,0.79);
+}
+
+.seta-voltar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+}
+
+.nomeToken {
+    position: absolute;
+    top: 20px;
+    font-family: "Arcade Classic";
+    font-size: 48px;
+    color: lavenderblush;
+}
+
+.info-modal-jogos {
+    font-family: Poppins;
+    font-weight: bold;
+    color: lavender;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.info-modal-jogos input {
+    display: block;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background: lavenderblush;
+    margin-top: 20px;
+    background: #dddee3;
+}
+
+.btn-confirmar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: #ecaf47;
+    border-radius: 0 0 10px 10px;
+}
+.btn-confirmar:hover {
+    background: #fcd804;
+}
+
+.btn-confirmar a {
+    color: #262525;
+    text-decoration: none;
+}
+
+
+.btn-fechar-modal-container {
+    width: 0;
+    height: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn-fechar-modal {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-family: "Arcade Classic";
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+    font-size: 45px;
+    border: none;
+    cursor: pointer;
+}
+button {
+    border: none;
+}

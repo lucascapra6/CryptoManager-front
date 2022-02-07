@@ -1,0 +1,88 @@
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    background: #de9b42;
+    z-index: 1000;
+}
+
+.menu-items {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-items a {
+    font-family: "Poppins";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-item {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #282b32;
+}
+.menu-item:hover {
+    color: white;
+}
+
+.jogos {
+    padding-left: 40px;
+}
+
+.jogos-modal, .whitelists-modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    background: #de9b42;
+    top: 55px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.jogos-modal a, .whitelists-modal a {
+    color: #282b35;
+}
+.jogos-modal a:hover, .whitelists-modal a:hover {
+    color: whitesmoke;
+}
+.jogos-menu:hover .jogos-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.whitelists-menu:hover .whitelists-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.whitelists-modal:hover .whitelists-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastrar-jogo-link, .gerenciar-jogo-link, .cadastrar-whitelist-link, .gerenciar-whitelist-link {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.burguer {
+    display: none;
+}
+@media screen and (max-width: 538px) {
+    .menu-items {
+        display: none;
+    }
+    .burguer {
+        display: block;
+    }
+}

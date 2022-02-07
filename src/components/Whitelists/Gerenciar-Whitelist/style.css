@@ -1,0 +1,94 @@
+.gerenciar-whitelists {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(20, 44, 97, 1) 0%, rgba(41, 92, 195, 1) 46%, rgba(95, 140, 235, 1) 73%, rgba(97, 133, 207, 1) 89%, rgba(112, 157, 249, 1) 100%);
+    background-size: cover;
+    margin-top: 70px;
+}
+
+.whitelists-lista-container {
+    max-width: fit-content;
+    height: fit-content;
+    margin: 50px auto 0 auto;
+    background: lavenderblush;
+    border-radius: 20px;
+}
+
+.whitelists-lista {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.descricao-coluna-whitelists {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    padding-left: 10px;
+    justify-content: space-between;
+    background: #ffa904;
+    border: 1px solid black;
+    border-radius: 20px 20px 0 0;
+}
+
+.descricao-coluna-whitelists th {
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding-top: 7px;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.whitelists-lista td {
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+}
+td {
+    font-family: Poppins;
+}
+.gerenciamento-btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+.gerenciamento-btn {
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    background: #dddee3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    padding-top: 7px;
+}
+
+.gerenciamento-btn:hover {
+    background: #ecaf47;
+}
+
+.gerenciamento-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.delete-btn {
+    font-family: "Arcade Classic";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #e5998b;
+    cursor: pointer;
+    font-size: 40px;
+}
