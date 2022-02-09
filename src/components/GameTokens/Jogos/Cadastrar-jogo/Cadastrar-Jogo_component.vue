@@ -6,8 +6,8 @@
       </article>
       <div class="inputs-container">
         <div class="inputs">
-          <label>Contrato do Token</label><input type="text" v-model="enderecoToken">
-          <label>Quantidade de Tokens</label><input type="number" class="input-number" v-model="quantidadeTokens">
+          <label>Contrato do Token</label><input required type="text" minlength="42" maxlength="42" v-model="enderecoToken">
+          <label>Quantidade de Tokens</label><input required type="number" class="input-number" v-model="quantidadeTokens">
           <label>Média de Tokens farmados por dia</label><input type="number" v-model="mediaTokensFarmDia">
         </div>
         <button @click="controller.cadastrarJogo()">Cadastrar</button>

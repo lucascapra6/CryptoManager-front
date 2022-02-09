@@ -68,6 +68,15 @@
     text-align: left;
     padding: 5px;
 }
+legend {
+    align-self: start;
+    margin-left: 25px;
+    margin-top: 10px;
+    color: #6b6b6b;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: start;
+}
 .inputs label {
     align-self: start;
     margin-left: 25px;
@@ -98,4 +107,8 @@ button {
 }
 button:hover {
     background: #fcd804;
+}
+
+input:invalid {
+    border: 1px solid red;
 }
