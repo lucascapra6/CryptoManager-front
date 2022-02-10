@@ -5,7 +5,7 @@
 <template>
   <section class="cadastrar-jogo-container">
     <article class="titulo-container">
-      <h1>Cadastre o jogo que você investiu</h1>
+      <h1>Cadastre o token que você investiu</h1>
       <p>O contrato do token pode ser obtido no site da <a target="_blank" href="https://bscscan.com/">BscScan</a></p>
     </article>
     <div class="inputs-container">
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import CadastrarJogo from "./cadastrar-jogo_component.controller";
+import CadastrarJogo from "./cadastrar-token_component.controller";
 
 export default {
   data() {
