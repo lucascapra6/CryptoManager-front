@@ -75,6 +75,10 @@ export default {
   beforeMount() {
     this.controller = new GerenciadorDeJogos(this)
     this.controller.init()
+  },
+  mounted() {
+    document.title = 'Gerenciar Jogos | CryptoManager'
+
   }
 }
 </script>

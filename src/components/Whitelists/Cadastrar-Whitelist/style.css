@@ -99,3 +99,21 @@ button {
 button:hover {
     background: #fcd804;
 }
+
+input:focus {
+    outline: none !important;
+    border:2px solid blue;
+    box-shadow: 0 0 10px #719ECE;
+}
+input:valid {
+    border: 1px solid limegreen;
+}
+input:focus:required:invalid {
+    border: 1px solid black;
+}
+.input-clicked:required:invalid {
+    border: 1px solid red;
+}
+.input-clicked:required:valid {
+    border: 1px solid green;
+}

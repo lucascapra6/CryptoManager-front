@@ -54,6 +54,9 @@ export default {
     this.controller = new GerenciadorWhitelistsController(this)
     this.controller.getWhitelists()
   },
+  mounted() {
+    document.title = 'Gerenciar Whitelists | CryptoManager'
+  }
 }
 </script>
 <style scoped src="./style.css">

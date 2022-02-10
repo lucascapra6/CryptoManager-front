@@ -109,6 +109,30 @@ button:hover {
     background: #fcd804;
 }
 
-input:invalid {
-    border: 1px solid red;
+
+
+input:focus {
+    outline: none !important;
+    border:2px solid blue;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*para que a primeira tentativa ou clique já não mostre invalid de imediato*/
+input:focus:required:invalid {
+   background: white;
+    border: 1px solid black;
+}
+input:required:valid {
+    background: #baf5ba;
+}
+/**
+ * If a required input has been clicked and is valid, it should be green.
+ */
+.input-clicked:required:valid {
+    border: 2px solid green;
+}
+/**
+ * If a required input has been clicked and is invalid, it should be red border.
+ */
+.input-clicked:required:invalid {
+    border: 2px solid red;
 }
