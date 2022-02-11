@@ -1,7 +1,7 @@
 <template>
   <section class="cadastrar-whitelist-container">
     <article class="titulo-container">
-      <h1>Cadastre a Whitelist para a qual você se inscreveu</h1>
+      <h1>Cadastre a whitelist para a qual você se inscreveu</h1>
     </article>
     <div class="inputs-container">
       <div class="inputs">

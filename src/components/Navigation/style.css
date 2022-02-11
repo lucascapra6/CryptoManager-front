@@ -79,6 +79,9 @@
     display: none;
 }
 @media screen and (max-width: 538px) {
+    .menu {
+        background:linear-gradient(90deg, rgba(20,44,97,1) 0%, rgba(41,92,195,1) 46%, rgba(95,140,235,1) 73%, rgba(97,133,207,1) 89%, rgba(112,157,249,1) 100%);
+    }
     .menu-items {
         display: none;
     }

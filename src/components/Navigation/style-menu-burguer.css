@@ -1,0 +1,83 @@
+.menu-hamburguer {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+.menu-hamburguer .line {
+    width: 40px;
+    height: 10px;
+    background: black;
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+.modal-menu {
+    width: 70vw;
+    height: 100vh;
+    position: absolute;
+    background: #f8ab55;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modal-menu li {
+    text-align: center;
+    margin: 10px 0;
+    font-family: Poppins;
+    font-weight: bold;
+}
+.modal-menu li:first-child {
+    margin-top: 80px;
+}
+.menu-item-inicio {
+    font-size: 50px;
+    text-decoration: none;
+    color: #282b32;
+}
+.modal-menu li p {
+    font-size: 50px;
+    cursor: pointer;
+    color: #282b32;
+}
+.modal-tokens-opcoes a {
+    font-size: 30px;
+    margin-top: 20px;
+}
+.modal-tokens-opcoes {
+    height: fit-content;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.v-enter-active {
+    transition: all 1s ease;
+}
+.v-leave-active {
+    transition: all 1.5s ease;
+}
+
+.v-enter {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.v-leave-to {
+    transform: translateX(145%);
+}
+
+li {
+    list-style: none;
+}

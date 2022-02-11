@@ -136,3 +136,4 @@ input:required:valid {
 .input-clicked:required:invalid {
     border: 2px solid red;
 }
+
