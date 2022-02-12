@@ -3,7 +3,8 @@
 <meta name="description" content="Cadastre os GameTokens NFT que você quer acompanhar!">
 </head>
 <template>
-  <transition>
+  <div>
+    <PageLoading v-if="pageLoading"></PageLoading>
     <section class="cadastrar-jogo-container">
       <article class="titulo-container">
         <h1>Cadastre o token que você investiu</h1>
@@ -25,7 +26,7 @@
         <button @click="controller.cadastrarJogo()">Cadastrar</button>
       </div>
     </section>
-  </transition>
+  </div>
 
 </template>
 
@@ -41,15 +42,18 @@ export default {
       quantidadeTokens: null,
       mediaTokensFarmDia: null,
       contratoClicked: false,
-      qtdTokensClicked:false
+      qtdTokensClicked:false,
+      pageLoading: false
     }
   },
   beforeMount() {
     this.controller = new CadastrarJogo(this)
   },
   mounted() {
-    document.title = 'Cadastrar Jogo | CryptoManager'
-  }
+    document.title = 'Cadastrar Jogo | CryptoManager';
+    this.pageLoading = true
+    setTimeout(() => {this.pageLoading = false}, 1500)
+  },
 }
 </script>
 

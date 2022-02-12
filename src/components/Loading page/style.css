@@ -1,0 +1,60 @@
+.loading-page {
+    background: linear-gradient(90deg, rgba(20, 44, 97, 1) 0%, rgba(41, 92, 195, 1) 46%, rgba(95, 140, 235, 1) 73%, rgba(97, 133, 207, 1) 89%, rgba(112, 157, 249, 1) 100%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+figure {
+    display: flex;
+    gap: 5px;
+}
+img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+#img1 {
+    animation:efeito-quica1 4.5s ease infinite;
+    animation-delay: 0.1s;
+}
+#img2 {
+    animation:efeito-quica1 4.5s ease infinite;
+    animation-delay: 0.2s;
+
+}
+#img3 {
+    animation:efeito-quica1 4.5s ease infinite;
+    animation-delay: 0.3s;
+
+
+}
+@keyframes efeito-quica1 {
+    0% {
+        transform: scale(1,1) translateY(0);
+    }
+    5% {
+        transform: scale(1.1,0.9) translateY(0);
+    }
+    15% {
+        transform:scale(0.9,1.1) translateY(-115px);
+    }
+    30% {
+        transform:scale(1.1,0.9) translateY(0);
+    }
+    45% {
+        transform:scale(0.9,1.1) translateY(-90px);
+    }
+    60% {
+        transform:scale(1.1,0.9) translateY(0);
+    }
+    75% {
+        transform:scale(0.9,1.1) translateY(-70px);
+    }
+    100% {
+        transform:scale(1,1) translateY(0);
+    }
+}

@@ -1,14 +1,17 @@
 <template>
-  <section class="cotacao-atual-container">
-    <ul class="cotacao-atual">
-      <li v-for="(jogo, index) in apiPancake" :key="index">
-        <div class="ativo-cotacao-container">
-          <p>{{ jogo.symbol }}</p>
-          <p>{{ jogo.price | numeroArredondado }}</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <div>
+    <section class="cotacao-atual-container">
+      <ul class="cotacao-atual">
+        <li v-for="(jogo, index) in apiPancake" :key="index">
+          <div class="ativo-cotacao-container">
+            <p>{{ jogo.symbol }}</p>
+            <p>{{ jogo.price | numeroArredondado }}</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+
 </template>
 <script>
 export default {

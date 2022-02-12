@@ -1,17 +1,17 @@
 <template>
     <main class="modal-gerenciar-jogos">
-      <div class="modal-gerenciar-jogos-opcoes-container"
-           v-show="!modal.atualizarBalanco && !modal.atualizarPrecoMedio && !modal.calcularROI">
-        <div class="btn-fechar-modal-container">
-          <router-link class="btn-fechar-modal" to="/gerenciarJogos">X</router-link>
+        <div class="modal-gerenciar-jogos-opcoes-container"
+             v-show="!modal.atualizarBalanco && !modal.atualizarPrecoMedio && !modal.calcularROI">
+          <div class="btn-fechar-modal-container">
+            <router-link class="btn-fechar-modal" to="/gerenciarJogos">X</router-link>
+          </div>
+          <button class="btn-opcoes" @click="modal.atualizarBalanco = true">Atualizar Tokens Farmados</button>
+          <button class="btn-opcoes" @click="modal.atualizarPrecoMedio = true">Atualizar Preço Médio</button>
+          <button class="btn-opcoes" @click="controller.liquidar()">Liquidar</button>
+          <button class="btn-opcoes" @click="modal.calcularROI = true">Configurar Cálculo de ROI</button>
         </div>
-        <button class="btn-opcoes" @click="modal.atualizarBalanco = true">Atualizar Tokens Farmados</button>
-        <button class="btn-opcoes" @click="modal.atualizarPrecoMedio = true">Atualizar Preço Médio</button>
-        <button class="btn-opcoes" @click="controller.liquidar()">Liquidar</button>
-        <button class="btn-opcoes" @click="modal.calcularROI = true">Configurar Cálculo de ROI</button>
-      </div>
 
-      <transition name="fade">
+      <transition>
         <section class="modal-gerenciar-jogos-container" v-show="modal.atualizarBalanco">
           <figure class="btn-fechar-modal-container">
               <img class="seta-voltar" src="../../../../assets/120092_6a6a07e9242bb0d8ad002c8291552da2.png" @click="modal.atualizarBalanco = false">
@@ -23,7 +23,7 @@
         </section>
       </transition>
 
-      <transition name="fade">
+      <transition>
         <section class="modal-gerenciar-jogos-container" v-show="modal.atualizarPrecoMedio">
           <figure class="btn-fechar-modal-container">
             <img class="seta-voltar" src="../../../../assets/120092_6a6a07e9242bb0d8ad002c8291552da2.png" @click="modal.atualizarPrecoMedio = false">
@@ -35,7 +35,7 @@
         </section>
       </transition>
 
-      <transition name="fade">
+      <transition>
         <section class="modal-gerenciar-jogos-container" v-show="modal.calcularROI">
           <figure class="btn-fechar-modal-container">
             <img class="seta-voltar" src="../../../../assets/120092_6a6a07e9242bb0d8ad002c8291552da2.png" @click="modal.calcularROI = false">

@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
-    <router-view></router-view>
+    <main>
+      <transition>
+        <router-view></router-view>
+      </transition>
+
+    </main>
   </div>
 </template>
 <script>
@@ -9,7 +14,21 @@ import Navigation from "./components/Navigation/Navigation_component";
 
 export default {
   components: {
-    Navigation
+    Navigation,
+  },
+  data() {
+    return {
+      loading: false
+    }
+  },
+  methods: {
+    carregarLoading() {
+      this.loading = true;
+      setTimeout(() => {this.loading = false}, 1000)
+    }
+  },
+  beforeMount() {
+   this.carregarLoading()
   },
 }
 </script>
@@ -32,14 +51,13 @@ input {
 }
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&family=Paytone+One&family=Poppins:wght@400;500&display=swap');
 
-.fade-enter-active {
+v-enter-active {
   transition: all .5s ease;
 }
-.fade-leave-active {
+v-leave-active {
   transition: all .5s ease;
 }
-.fade-enter, .fade-leave-to {
+v-enter, v-leave-to {
   opacity: 0;
-  transform: translateX(-500px);
 }
 </style>

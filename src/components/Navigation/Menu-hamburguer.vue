@@ -15,10 +15,10 @@
             <router-link to="/gerenciarJogos" class="gerenciar-jogo-link">Gerenciar</router-link>
           </li>
           <li @click="toggleMenuWhitelists"><p>Whitelists</p></li>
-          <li @click="menuAberto = false" v-show="menuWhitelistsAberto" class="modal-tokens-opcoes">
-            <router-link to="/cadastrarWhitelist" class="cadastrar-whitelist-link">Cadastrar</router-link>
-            <router-link to="/gerenciarWhitelists" class="gerenciar-whitelist-link">Gerenciar</router-link>
-          </li>
+            <li @click="menuAberto = false" v-show="menuWhitelistsAberto" class="modal-tokens-opcoes">
+                <router-link to="/cadastrarWhitelist" class="cadastrar-whitelist-link">Cadastrar</router-link>
+                <router-link to="/gerenciarWhitelists" class="gerenciar-whitelist-link">Gerenciar</router-link>
+            </li>
         </ul>
       </nav>
     </transition>
@@ -46,6 +46,7 @@ export default {
       this.menuTokensAberto = false
     }
   },
+
 }
 </script>
 

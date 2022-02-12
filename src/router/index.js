@@ -15,7 +15,11 @@ const routes = [
   {
     path:'/',
     name:'Home',
-    component: Home
+    component: Home,
+    beforeEnter: (to, from, next) => {
+      console.log("Foi para Home")
+      next()
+    }
   },
   {
     path:'/cadastrarJogo',

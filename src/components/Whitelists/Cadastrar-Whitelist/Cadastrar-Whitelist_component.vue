@@ -1,20 +1,24 @@
 <template>
-  <section class="cadastrar-whitelist-container">
-    <article class="titulo-container">
-      <h1>Cadastre a whitelist para a qual você se inscreveu</h1>
-    </article>
-    <div class="inputs-container">
-      <div class="inputs">
-        <label>Nome do Token</label><input type="text" v-model="nomeToken" @click="nomeTokenClicked = true" required
-                                           :class="{'input-clicked':nomeTokenClicked}">
-        <label>Data de início</label><input type="date" v-model="dataDeInicio" @click="dataInicioClicked = true"
-                                            required :class="{'input-clicked':dataInicioClicked}">
-        <label>Data de término</label><input type="date" v-model="dataFinal" @click="dataFinalClicked = true" required
-                                             :class="{'input-clicked':dataFinalClicked}">
+  <div>
+    <PageLoading v-if="pageLoading"></PageLoading>
+    <section class="cadastrar-whitelist-container">
+      <article class="titulo-container">
+        <h1>Cadastre a whitelist para a qual você se inscreveu</h1>
+      </article>
+      <div class="inputs-container">
+        <div class="inputs">
+          <label>Nome do Token</label><input type="text" v-model="nomeToken" @click="nomeTokenClicked = true" required
+                                             :class="{'input-clicked':nomeTokenClicked}">
+          <label>Data de início</label><input type="date" v-model="dataDeInicio" @click="dataInicioClicked = true"
+                                              required :class="{'input-clicked':dataInicioClicked}">
+          <label>Data de término</label><input type="date" v-model="dataFinal" @click="dataFinalClicked = true" required
+                                               :class="{'input-clicked':dataFinalClicked}">
+        </div>
+        <button @click="controller.cadastrar()">Cadastrar</button>
       </div>
-      <button @click="controller.cadastrar()">Cadastrar</button>
-    </div>
-  </section>
+    </section>
+  </div>
+
 </template>
 
 <script>
@@ -29,14 +33,17 @@ export default {
       dataFinal: null,
       nomeTokenClicked: false,
       dataInicioClicked: false,
-      dataFinalClicked: false
+      dataFinalClicked: false,
+      pageLoading:false
     }
   },
   beforeMount() {
     this.controller = new CadastrarWhitelist(this)
   },
   mounted() {
-    document.title = 'Cadastrar Whitelists | CryptoManager'
+    document.title = 'Cadastrar Whitelists | CryptoManager';
+    this.pageLoading = true
+    setTimeout(() => {this.pageLoading = false}, 1500)
   }
 }
 </script>
