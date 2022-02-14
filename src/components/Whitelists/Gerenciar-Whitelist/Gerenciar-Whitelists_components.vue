@@ -29,7 +29,27 @@
       </div>
       <router-view></router-view>
     </div>
+    <div class="gerenciar-whitelists-mobile">
+      <select v-model="whitelistSelecionada">
+        <option v-for="(whitelist, index) in whitelists" :key="index" :value="index">{{whitelist.token_nome}}</option>
+      </select>
+      <table>
+        <tr class="descricao-coluna-whitelists-mobile">
+          <th>Token/Jogo</th>
+          <th>Data de Inicio</th>
+          <th>Data Final</th>
+          <th>Tempo Restante</th>
+        </tr>
+        <tr class="whitelists-lista-mobile">
+          <td>{{whitelists[whitelistSelecionada].token_nome}}</td>
+          <td>{{whitelists[whitelistSelecionada].data_inicio | formatDate}}</td>
+          <td>{{whitelists[whitelistSelecionada].data_final | formatDate}}</td>
+          <td>{{whitelists[whitelistSelecionada].tempo_restante | formatPrazo}}</td>
+        </tr>
+      </table>
+    </div>
   </div>
+
 
 </template>
 <script>
@@ -39,7 +59,8 @@ export default {
     return {
       controller: null,
       whitelists: [],
-      pageLoading:false
+      pageLoading:false,
+      whitelistSelecionada: 0
     }
   },
   filters: {

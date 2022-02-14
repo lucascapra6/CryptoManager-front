@@ -20,7 +20,7 @@ class GerenciadorWhitelistsController extends AbstractController {
                 new Date(Date.now()),
                 new Date(this.scope.whitelists[i].data_final),
             )
-            this.scope.whitelists[i].tempo_restante = (result * -1) - 1 //cria uma nova propriedade(tempo_restante_ em cada item do array
+            this.scope.whitelists[i].tempo_restante = (result * -1) //cria uma nova propriedade(tempo_restante_ em cada item do array
         }
     }
 }

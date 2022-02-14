@@ -28,9 +28,9 @@ export default {
     }
   },
   beforeMount() {
-    this.controller = new HomeController(this)
+    this.controller = new HomeController(this);
   },
-  mounted() {
+  created() {
     document.title = 'CryptoManager';
     this.pageLoading = true
     setTimeout(() => {this.pageLoading = false}, 1500)

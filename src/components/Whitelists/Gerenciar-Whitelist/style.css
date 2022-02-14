@@ -8,11 +8,14 @@
 }
 
 .whitelists-lista-container {
-    max-width: fit-content;
+    width: fit-content;
+    max-width: 800px;
     height: fit-content;
     margin: 50px auto 0 auto;
     background: lavenderblush;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .whitelists-lista {
@@ -91,4 +94,66 @@ td {
     background-color: #e5998b;
     cursor: pointer;
     font-size: 40px;
+}
+
+@media screen and (max-width: 535px) {
+    table {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .gerenciar-whitelists {
+        display: none;
+    }
+
+    .gerenciar-whitelists-mobile {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .descricao-coluna-whitelists-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #ffa904;
+        width: 100%;
+        max-width: 120px;
+        margin-left: 10px;
+        border-radius: 10px 0 0 10px;
+    }
+    .descricao-coluna-whitelists-mobile th {
+        font-family: 'Poppins';
+        font-weight: bold;
+        padding-top: 7px;
+        margin: 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+    .whitelists-lista-mobile {
+        display: grid;
+        background: lavenderblush;
+        width: 100%;
+        max-width:400px;
+        height: 50vh;
+        margin-right: 10px;
+        border-radius: 0 10px 10px 0;
+    }
+    .whitelists-lista-mobile td {
+        font-family: 'Poppins';
+        font-weight: bold;
+        padding-top: 7px;
+        margin: 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+    select {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+    }
 }

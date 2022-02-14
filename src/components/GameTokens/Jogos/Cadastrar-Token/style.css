@@ -29,6 +29,7 @@
 .cadastrar-jogo-container {
     padding-top: 30px;
     max-width: 680px;
+    width: 100%;
     height: 500px;
     margin: 0 auto;
     border-radius: 5px;
@@ -37,7 +38,8 @@
 }
 
 .inputs-container {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     height: 50vh;
     margin-top:30px;
     background:whitesmoke;
@@ -51,7 +53,8 @@
     box-shadow:1px -5px 12px -1px rgba(0,0,0,0.5)
 }
 .inputs {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     margin-top:30px;
     display: flex;
     flex-direction: column;
@@ -137,3 +140,35 @@ input:required:valid {
     border: 2px solid red;
 }
 
+@media screen and (max-width: 472px) {
+    .titulo-container h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    .titulo-container p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .titulo-container a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 398px) {
+    .titulo-container {
+        justify-content: flex-start;
+    }
+    .titulo-container h1 {
+        font-size: 30px;
+        margin-top: 10px;
+        padding: 0 5px;
+    }
+    .titulo-container p {
+        font-size: 22px;
+        padding: 0 10px;
+        text-align: center;
+    }
+    .titulo-container a {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+}

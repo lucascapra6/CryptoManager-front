@@ -19,6 +19,7 @@
     font-size: 2rem;
     color: #ed8451;
     max-width: 430px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -34,7 +35,7 @@
     color: lavender;
     font-family: Poppins;
     font-style: normal;
-    text-align: start;
+    text-align: center;
 }
 .home img {
     display: block;
@@ -45,7 +46,8 @@
     animation: efeito-quica 4.5s ease infinite;
 }
 .login-btn {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 70px;
     font-family: 'Poppins';
     font-weight: bold;
@@ -103,21 +105,24 @@
         padding: 0 10px;
     }
     .text-content p {
-        max-width: 350px;
         text-align: justify-all;
     }
 }
 @media screen and (max-width: 538px) {
 .text-content p {
     text-align: justify-all;
-    max-width: 340px;
 }
 }
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 369px) {
     .text-content {
         text-align: center;
         padding: 0 10px;
     }
+    .text-content h1 {
+        font-size: 30px;
+    }
+
     .text-content p {
         font-size: 20px;
         text-align: justify-all;

@@ -55,11 +55,6 @@ a:visited {
     color: #282b32;
 }
 
-
-
-
-
-
 .v-enter-active {
     transition: all 1s ease;
 }
@@ -77,4 +72,22 @@ a:visited {
 
 li {
     list-style: none;
+}
+
+@media screen and (max-width: 384px) {
+
+    .modal-menu ul li p{
+        font-size: 40px;
+    }
+    .cadastrar-jogo-link a {
+        font-size: 20px;
+    }
+    .menu-item-inicio {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .modal-menu {
+        width: 100vw;
+    }
 }
