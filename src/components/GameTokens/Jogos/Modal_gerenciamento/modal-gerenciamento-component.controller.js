@@ -14,6 +14,8 @@ class ModalGerenciamento extends AbstractController {
                 this.scope.$emit("ativa-calcula-total-carteira")
                 this.scope.$emit('ativar-calcula-roi')
                 this.scope.modal.atualizarBalanco = false
+                const CotacaoAtualTokenSelecionado = this.scope.apiPancake[this.scope.acessoArray.indiceJogoSelecionado].price
+                alertTotalAddCarteira(this.scope.tokensFarmados, CotacaoAtualTokenSelecionado)
             } catch (e) {
                 console.log(e)
             }
@@ -61,5 +63,9 @@ class ModalGerenciamento extends AbstractController {
             console.log(e)
         }
     }
+}
+function alertTotalAddCarteira(tokensAdquiridos, precoAtual) {
+    alert(`Total de Tokens inseridos: ${tokensAdquiridos}
+Valor inserido em carteira: ${Number(tokensAdquiridos * precoAtual).toFixed(2)}`)
 }
 export default ModalGerenciamento
