@@ -5,12 +5,14 @@
     background: linear-gradient(90deg, rgba(20, 44, 97, 1) 0%, rgba(41, 92, 195, 1) 46%, rgba(95, 140, 235, 1) 73%, rgba(97, 133, 207, 1) 89%, rgba(112, 157, 249, 1) 100%);
     background-size: cover;
     margin-top: 140px;
+    display: flex;
+    justify-content: center;
 }
 
 .jogos-lista-container {
     max-width: 960px;
     height: fit-content;
-    margin: 50px auto 0 auto;
+    margin: 50px 10px 0 10px;
     background: lavenderblush;
     border-radius: 20px;
 }
@@ -102,4 +104,86 @@
 
 .delete-btn:hover {
     background: tomato;
+}
+
+@media screen and (max-width: 649px) {
+    .select-and-btn-container {
+        display: flex;
+        width: 100%;
+        margin-top: 180px;
+        justify-content: center;
+        align-items: center;
+    }
+    .gerenciar-jogos {
+        display: none;
+    }
+.gerenciar-jogos-mobile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+    .descricao-coluna-jogos-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #ffa904;
+        width: 100%;
+        max-width: 250px;
+        margin-left: 10px;
+        border-radius: 10px 0 0 10px;
+        border: 1px solid black;
+    }
+    .descricao-coluna-jogos-mobile th {
+        font-family: 'Poppins';
+        font-weight: bold;
+        height: 60px;
+        padding-top: 20px;
+    }
+    .jogos-lista-mobile {
+        display: grid;
+        background: lavenderblush;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 250px;
+        margin-right: 10px;
+        border-radius: 0 10px 10px 0;
+        border: 1px solid black;
+    }
+    .jogos-lista-mobile td {
+        font-family: 'Poppins';
+        font-weight: bold;
+        padding-top: 20px;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px dashed #eeb658;
+    }
+    select {
+        width: 100%;
+        max-width: 300px;
+        height: 45px;
+        border: none;
+        border-radius: 5px;
+        font-family: Poppins;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        background: #dddee3;
+        box-shadow: 1px 7px 14px -1px rgba(0,0,0,0.91);
+    }
+    .botoes {
+        display: flex;
+        position: relative;
+        margin-left: 5px;
+    }
+    .gerenciamento-btn {
+        margin-right: 5px;
+    }
 }

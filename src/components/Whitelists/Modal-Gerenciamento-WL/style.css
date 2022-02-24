@@ -26,6 +26,8 @@
 .nomeToken {
     font-family: "Arcade Classic";
     font-size: 48px;
+    position: absolute;
+    top: 30px;
 }
 .btn-fechar-modal-container {
     display: flex;
@@ -64,15 +66,21 @@
 }
 .info-modal-whitelists {
     font-family: Poppins;
+    width: 100%;
     max-width: 800px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: bold;
 }
+
 .info-modal-whitelists input {
     text-align: center;
     width: 200px;
+    height: 30px;
     align-self: center;
 }
 button {

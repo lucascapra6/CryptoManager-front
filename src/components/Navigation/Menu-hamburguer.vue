@@ -9,12 +9,12 @@
       <nav v-show="menuAberto" class="modal-menu">
         <ul>
           <li @click="menuAberto=false"><router-link to="/" class="menu-item-inicio">Inicio</router-link></li>
-          <li @click="toggleMenuTokens"><p>Tokens</p></li>
+          <li @click="toggleMenuTokens"><p :class="{'color-white':menuTokensAberto}">Tokens</p></li>
           <li @click="menuAberto = false" v-show="menuTokensAberto" class="modal-tokens-opcoes">
             <router-link to="/cadastrarJogo" class="cadastrar-jogo-link">Cadastrar</router-link>
             <router-link to="/gerenciarJogos" class="gerenciar-jogo-link">Gerenciar</router-link>
           </li>
-          <li @click="toggleMenuWhitelists"><p>Whitelists</p></li>
+          <li @click="toggleMenuWhitelists"><p :class="{'color-white':menuWhitelistsAberto}">Whitelists</p></li>
             <li @click="menuAberto = false" v-show="menuWhitelistsAberto" class="modal-tokens-opcoes">
                 <router-link to="/cadastrarWhitelist" class="cadastrar-whitelist-link">Cadastrar</router-link>
                 <router-link to="/gerenciarWhitelists" class="gerenciar-whitelist-link">Gerenciar</router-link>

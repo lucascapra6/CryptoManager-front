@@ -18,21 +18,35 @@
             <td>{{whitelist.data_final | formatDate}}</td>
             <td>{{whitelist.tempo_restante | formatPrazo}}</td>
             <div class="gerenciamento-btn-container">
-              <td>
-                <router-link class="gerenciamento-btn" :to="{name:'whitelist', params: {whitelist:'teste'}}"><img
+              <button @click="controller.abrirModalGerenciamento(index)">
+                <router-link
+                    class="gerenciamento-btn"
+                    :to="{name:'whitelist', params: {whitelist: whitelist.token_nome}}"><img
                     src="../../../assets/115892.png"></router-link>
-              </td>
-              <td class="delete-btn">X</td>
+              </button>
+              <button class="delete-btn" @click="controller.deletarWhitelist(index)">X</button>
             </div>
           </tr>
         </table>
       </div>
-      <router-view></router-view>
+      <router-view
+          :acessoInfoWhitelist="acessoArray"
+          @ativar-data-final-alterada="controller.getWhitelists()"
+      ></router-view>
     </div>
     <div class="gerenciar-whitelists-mobile">
-      <select v-model="whitelistSelecionada">
-        <option v-for="(whitelist, index) in whitelists" :key="index" :value="index">{{whitelist.token_nome}}</option>
-      </select>
+      <div class="select-and-btn-container">
+        <select v-model="whitelistSelecionada">
+          <option v-for="(whitelist, index) in whitelists" :key="index" :value="index">{{whitelist.token_nome}}</option>
+        </select>
+        <div class="botoes">
+          <button>
+            <router-link class="gerenciamento-btn" :to="{name:'whitelist', params: {whitelist:'teste'}}"><img
+                src="../../../assets/115892.png"></router-link>
+          </button>
+          <button class="delete-btn" @click="controller.deletarWhitelist(index)">X</button>
+        </div>
+      </div>
       <table>
         <tr class="descricao-coluna-whitelists-mobile">
           <th>Token/Jogo</th>
@@ -60,7 +74,12 @@ export default {
       controller: null,
       whitelists: [],
       pageLoading:false,
-      whitelistSelecionada: 0
+      whitelistSelecionada: 0,
+      acessoArray: {
+        indiceWhitelistSelecioanda: null,
+        nomeWhitelistSelecionada: null,
+        idWhitelistSelecionada: null
+      },
     }
   },
   filters: {

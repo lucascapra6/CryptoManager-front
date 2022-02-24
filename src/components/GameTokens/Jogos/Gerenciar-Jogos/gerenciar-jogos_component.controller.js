@@ -50,6 +50,18 @@ class GerenciadorDeJogos extends AbstractController {
             console.log(e)
         }
     }
+    async deletarJogoMobile() {
+        const idJogoSelecionado = this.scope.jogos[this.scope.indiceJogoSelecionadoMobile].id
+        try {
+            await axios.post('http://localhost:3000/deletarJogo', {
+                id: idJogoSelecionado
+            })
+            this.scope.apiPancake.splice(this.scope.indiceJogoSelecionadoMobile, 1)
+            await this.fetchJogos()
+        } catch (e) {
+            console.log(e)
+        }
+    }
     async calcularTotalEmCarteira() {
         for (let i = 0; i < this.scope.jogos.length; i++) {
             axios.put('http://localhost:3000/totalEmCarteira', {
@@ -77,6 +89,14 @@ class GerenciadorDeJogos extends AbstractController {
         this.scope.acessoArray.indiceJogoSelecionado = index
         this.scope.acessoArray.idJogoSelecionado = this.scope.jogos[index].id
         this.scope.acessoArray.nomeJogoSelecionado = this.scope.jogos[index].jogo
+    }
+    parearAcessoDadosMobileDesktop() {
+        const indiceJogoSelecionado = this.scope.indiceJogoSelecionadoMobile
+        const idJogoSelecionado = this.scope.jogos[this.scope.indiceJogoSelecionadoMobile].id
+        const nomeJogoSelecionado = this.scope.jogos[this.scope.indiceJogoSelecionadoMobile].jogo
+        this.scope.acessoArray.indiceJogoSelecionado = indiceJogoSelecionado
+        this.scope.acessoArray.idJogoSelecionado = idJogoSelecionado
+        this.scope.acessoArray.nomeJogoSelecionado = nomeJogoSelecionado
     }
     async ativarFetchJogos() {
         await this.fetchJogos()

@@ -60,4 +60,7 @@ v-leave-active {
 v-enter, v-leave-to {
   opacity: 0;
 }
+button {
+  border: none;
+}
 </style>

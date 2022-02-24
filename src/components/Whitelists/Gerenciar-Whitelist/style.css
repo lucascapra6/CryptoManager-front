@@ -5,13 +5,15 @@
     background: linear-gradient(90deg, rgba(20, 44, 97, 1) 0%, rgba(41, 92, 195, 1) 46%, rgba(95, 140, 235, 1) 73%, rgba(97, 133, 207, 1) 89%, rgba(112, 157, 249, 1) 100%);
     background-size: cover;
     margin-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
 .whitelists-lista-container {
     width: fit-content;
     max-width: 800px;
     height: fit-content;
-    margin: 50px auto 0 auto;
+    margin: 50px 10px 0 10px;
     background: lavenderblush;
     border-radius: 20px;
     display: flex;
@@ -122,12 +124,12 @@ td {
         max-width: 120px;
         margin-left: 10px;
         border-radius: 10px 0 0 10px;
+        border: 1px solid black;
     }
     .descricao-coluna-whitelists-mobile th {
         font-family: 'Poppins';
         font-weight: bold;
-        padding-top: 7px;
-        margin: 10px 0;
+        padding-top: 35px;
         justify-content: center;
         text-align: center;
     }
@@ -136,24 +138,43 @@ td {
         background: lavenderblush;
         width: 100%;
         max-width:400px;
+        grid-template-columns: 1fr;
         height: 50vh;
         margin-right: 10px;
         border-radius: 0 10px 10px 0;
+        border: 1px solid black;
     }
     .whitelists-lista-mobile td {
         font-family: 'Poppins';
         font-weight: bold;
-        padding-top: 7px;
-        margin: 10px 0;
+        padding-top: 25px;
         justify-content: center;
         text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .select-and-btn-container {
+        display: flex;
+        width: 100%;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
     }
     select {
         width: 100%;
         max-width: 300px;
-        margin: 20px;
-        height: 30px;
+        height: 45px;
         border: none;
         border-radius: 5px;
+        font-family: Poppins;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        background: #dddee3;
+        box-shadow: 1px 7px 14px -1px rgba(0,0,0,0.91);
+    }
+    .botoes {
+        display: flex;
+        position: relative;
+        margin-left: 5px;
     }
 }
