@@ -5,7 +5,7 @@ class HomeController extends AbstractController {
         super(scope);
     }
     fazerLogin() {
-       this.scope.login = 'Função disponível em breve'
+       this.scope.login = 'Função temporariamente desabilitada'
         alert(this.scope.login)
     }
 }
